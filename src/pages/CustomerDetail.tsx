@@ -1,7 +1,9 @@
 import React from "react";
-import { useMutation } from "@tanstack/react-query";
+import { QueryClient, useMutation } from "@tanstack/react-query";
 import { Customer } from "./types";
 import axios from "axios";
+
+const queryClient = new QueryClient();
 
 export default function CustomerDetail(customer: Customer) {
   const deleteCustomer = async (customerId: number): Promise<Customer> => {
@@ -14,6 +16,9 @@ export default function CustomerDetail(customer: Customer) {
   const mutation = useMutation({
     mutationKey: [`delete-customer`],
     mutationFn: (customerId) => deleteCustomer(customerId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [`fetch-customers`] });
+    },
   });
 
   const handleDelete = () => {
