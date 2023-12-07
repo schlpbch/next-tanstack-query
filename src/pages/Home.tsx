@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import AddCustomerSection from "./addCustomerSection";
 import CustomersSection from "./CustomersSection";
 

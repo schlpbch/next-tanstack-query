@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@doe.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane@doe.com"
+    },
+    {
+      "id": 3,
+      "name": "Ann Doe",
+      "email": "john@doe.com"
+    },
+    {
+      "id": 4,
+      "name": "Rose Doe",
+      "email": "jane@doe.com"
+    },
+    {
+      "id": 5,
+      "name": "Marie Doe",
+      "email": "marie@doe.com"
+    },
+    {
+      "id": 6,
+      "name": "Rose Doe",
+      "email": "rose@doe.com"
+    }
+  ]
+}
