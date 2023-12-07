@@ -23,7 +23,7 @@ export default function CustomersSection() {
     <section>
       <h1 className="text-center text-xl font-bold py-4">Customer Data</h1>
 
-      <div className="grid grid-cols-3 gap-4 m-3">
+      <div className="grid grid-cols-3 gap-3 m-2">
         {customers?.map((customer) => (
           <CustomerDetail key={customer.id} {...customer} />
         ))}
