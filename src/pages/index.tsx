@@ -1,4 +1,4 @@
-import AddCustomerSection from "./addCustomerSection";
+import AddCustomerSection from "./AddCustomerSection";
 import CustomersSection from "./CustomersSection";
 
 export default function Home() {

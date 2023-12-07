@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "mock-api": "json-server --watch src/api/db.json --port 3100 --delay 3000"
+    "mock-api": "json-server --watch src/api/db.json --port 3100 --delay 1000"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.12.2",

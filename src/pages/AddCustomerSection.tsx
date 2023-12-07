@@ -46,7 +46,7 @@ export default function AddCustomerSection() {
         <input
           type="text"
           placeholder="Name"
-          aria-label="Name"
+          name="Name"
           value={newCustomer.name}
           onChange={(e) =>
             setNewCustomer({ ...newCustomer, name: e.target.value })
@@ -55,7 +55,7 @@ export default function AddCustomerSection() {
         <input
           type="text"
           placeholder="Email"
-          aria-label="Email"
+          name="Email"
           value={newCustomer.email}
           onChange={(e) =>
             setNewCustomer({ ...newCustomer, email: e.target.value })
@@ -63,10 +63,15 @@ export default function AddCustomerSection() {
         />
         <button
           onClick={handleAddCustomer}
-          className="bg-blue-500 hover:bg-blue-700 text-white  py-1 px-2 rounded"
+          className="bg-blue-500 hover:bg-blue-700 text-white px-2 rounded"
         >
           Add
         </button>
+      </div>
+      <div className="text-center text-sm py-2">
+        {mutation.isPending && <h2>Adding...</h2>}
+        {mutation.isSuccess && <h2>Added!</h2>}
+        {mutation.isError && <h2>Oops! An error has occurred!</h2>}
       </div>
     </section>
   );

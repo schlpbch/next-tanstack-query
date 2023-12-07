@@ -16,11 +16,6 @@
       "email": "john@doe.com"
     },
     {
-      "id": 4,
-      "name": "Rose Doe",
-      "email": "jane@doe.com"
-    },
-    {
       "id": 5,
       "name": "Marie Doe",
       "email": "marie@doe.com"
