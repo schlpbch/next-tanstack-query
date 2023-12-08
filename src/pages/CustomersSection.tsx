@@ -5,11 +5,13 @@ import { Customer } from "./types";
 import CustomerDetail from "./CustomerDetail";
 
 const fetchCustomers = async (): Promise<Customer[]> => {
-  const res = await axios.get<Customer[]>(`http://localhost:3100/customers/`, {
+  const res0 = await axios.get<Customer[]>(`http://localhost:3100/customers/`, {
     timeout: 2000,
     signal: AbortSignal.timeout(2000),
   });
-  return res.data; // Return the customers data
+  
+  const res = await fetch(`http://localhost:3100/customers/`).then((res) => res.json());
+  return res; // Return the customers data
 };
 
 export default function CustomersSection() {
