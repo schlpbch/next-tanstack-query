@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { QueryClient, useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { Customer } from "./types";
-
-const queryClient = new QueryClient();
 
 const addCustomer = async (customer: Customer): Promise<Customer> => {
   const res = await axios.post<Customer>(
@@ -30,7 +28,6 @@ export default function AddCustomerSection() {
         name: "",
         email: "",
       });
-      queryClient.invalidateQueries({ queryKey: [`fetch-customers`] });
     },
     onError: (err) => {
       console.log(err);
